@@ -26,14 +26,14 @@ export default function Hero() {
 
             {/* Titre */}
             <h1 className="text-[28px] font-bold leading-[1.18] md:text-[36px]">
-              Simplifiez la gestion comptable de votre PME en un clin d&apos;œil.
+              Votre comptable tient dans un WhatsApp
             </h1>
            
 
             {/* Paragraphe */}
             <p className="my-4 max-w-[500px] text-[15px] leading-relaxed text-gray-300">
-              Fini la paperasse interminable et les erreurs de saisie. Centralisez vos factures, 
-              analysez la trésorerie et automatisez votre comptabilité en quelques clics.
+              Femi transforme automatiquement vos ventes et achats en écritures comptables. 
+              Zéro paperasse, 100% conforme, idéal pour les TPME et restaurants
             </p>
 
             {/* Boutons d'action */}
