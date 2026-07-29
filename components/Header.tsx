@@ -40,12 +40,12 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a
+          {/* <a
             href="#contact"
             className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-[#9013FE] to-[#E3127D] px-5 py-3 text-[14.5px] font-semibold text-white transition-all hover:-translate-y-px hover:shadow-[0_0_20px_rgba(227,18,125,0.35)]"
           >
             Demander un diagnostic
-          </a>
+          </a> */}
         </div>
       </nav>
     </header>
