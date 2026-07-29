@@ -26,7 +26,7 @@ export default function Header() {
             className="h-8 w-auto object-contain"
             priority
           />
-          <span>Fémi Omnisoft Africa</span>
+          <span>Femi by Omnisoft Africa</span>
         </a>
 
         {/* Liens de navigation */}
