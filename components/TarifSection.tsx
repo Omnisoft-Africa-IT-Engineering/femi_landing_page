@@ -49,7 +49,7 @@ const PLANS = [
 export default function TarifSection() {
   return (
     <section id="tarifs" className="bg-[#0D021A] py-16 text-white md:py-24">
-      <div className="mx-auto max-w-wrap px-8">
+      <div className="mx-auto max-w-[1200px] px-6 md:px-8">
         <div className="mb-3 max-w-[600px]">
           <span className="mb-3 block font-mono text-[13px] text-[#E3127D]">
             TARIFS

@@ -35,7 +35,7 @@ export default function ProblemSection() {
       <div className="pointer-events-none absolute left-1/4 top-0 h-96 w-96 rounded-full bg-[#9013FE] opacity-25 blur-[160px]" />
       <div className="pointer-events-none absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-[#E3127D] opacity-20 blur-[180px]" />
 
-      <div className="mx-auto max-w-wrap px-8">
+     <div className="mx-auto max-w-[1200px] px-6 md:px-8">
         <div className="mb-3 max-w-[600px]">
           <h2 className="text-[28px] leading-tight text-white md:text-[32px]">
             Six symptômes qu&apos;on retrouve dans presque toutes les PME
