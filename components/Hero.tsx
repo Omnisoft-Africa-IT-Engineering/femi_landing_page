@@ -39,14 +39,14 @@ export default function Hero() {
             {/* Boutons d'action */}
             <div className="flex flex-wrap items-center gap-3 pt-1">
               <a 
-                href="#demo"
+                href="#solution"
                 className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-[#9013FE] to-[#E3127D] px-5 py-2.5 text-[13.5px] font-semibold text-white transition-all hover:-translate-y-px hover:shadow-[0_0_20px_rgba(227,18,125,0.35)]"
               >
                 Notre méthode
               </a>
               
               <a 
-                href="#fonctionnalites"
+                href="#contact"
                 className="inline-flex items-center justify-center rounded-lg border border-white/20 px-4 py-2.5 text-[13.5px] font-semibold text-white transition-colors hover:border-[#E3127D]"
               >
                 Découvrir la plateforme

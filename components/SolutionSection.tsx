@@ -8,7 +8,7 @@ const PHASES = [
       "Inventaire des documents existants",
       "Repérage des pertes d'information",
     ],
-    duration: "Semaine 1",
+    duration: "Jour 1",
   },
   {
     num: "02",
@@ -19,7 +19,7 @@ const PHASES = [
       "Classement des factures et reçus",
       "Modèle adapté à votre activité",
     ],
-    duration: "Semaines 2–4",
+    duration: "Jour 2–4",
   },
   {
     num: "03",
@@ -30,7 +30,7 @@ const PHASES = [
       "Cas concrets tirés de votre activité",
       "Support pendant les premières semaines",
     ],
-    duration: "Semaines 5–6",
+    duration: "Jour 5–6",
   },
   {
     num: "04",
@@ -41,14 +41,14 @@ const PHASES = [
       "Rappels des échéances fiscales",
       "Vous pilotez seul par la suite",
     ],
-    duration: "Semaines 7–8",
+    duration: "Jour 7–8",
   },
 ];
 
 export default function SolutionSection() {
   return (
     <section id="solution" className="bg-[#0D021A] py-16 text-white md:py-24">
-      <div className="mx-auto max-w-wrap px-8">
+     <div className="mx-auto max-w-[1200px] px-6 md:px-8">
         <div className="mb-3 max-w-[620px]">
           <span className="mb-3 block font-mono text-[13px] text-[#E3127D]">
             NOTRE MÉTHODE
