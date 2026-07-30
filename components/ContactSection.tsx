@@ -9,7 +9,7 @@ const POINTS = [
 export default function ContactSection() {
   return (
     <section id="contact" className="bg-[#0D021A] py-16 text-white md:py-28">
-      <div className="mx-auto grid max-w-wrap grid-cols-1 gap-12 px-8 md:grid-cols-2 md:gap-16">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 px-6 md:grid-cols-2 md:gap-16 md:px-8">
         <div>
           <span className="mb-[18px] inline-block font-mono text-[12.5px] uppercase tracking-[0.06em] text-[#E3127D]">
             Étape suivante

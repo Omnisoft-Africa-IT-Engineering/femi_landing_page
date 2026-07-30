@@ -1,42 +1,44 @@
 const PLANS = [
   {
-    name: "Essentiel",
-    price: "150",
+    name: "Micro",
+    price: "10.99",
     period: "/ mois",
-    description: "Pour une petite structure qui veut sortir du carnet et du tableur.",
+    description: "Pour sortir du carnet et du tableur, sans changer vos habitudes.",
     features: [
       "Registre journalier numérique",
-      "Classement des factures et reçus",
-      "Solde de caisse à jour",
-      "Rappel des échéances fiscales",
+      "Tableau de bord avec KPIs de pilotage",
+      "Enregistrement illimité de vos pièces comptables",
+      "Rappels automatiques des échéances fiscales",
     ],
-    cta: "Choisir Essentiel",
+    cta: "Choisir Micro",
     highlighted: false,
   },
   {
-    name: "Croissance",
-    price: "290",
+    name: "Pro",
+    price: "20.99",
     period: "/ mois",
-    description: "Pour une PME sans comptable à temps plein qui veut un vrai suivi.",
+    description: "Pour piloter votre PME comme si vous aviez un comptable à temps plein.",
     features: [
-      "Tout ce qui est inclus dans Essentiel",
-      "Tableau de bord mensuel",
-      "Formation de votre équipe",
+      "Tout ce qui est inclus dans Micro",
+      "Alertes en temps réel sur vos produits les plus performants",
+      "Formation personnalisée de votre équipe",
       "Support prioritaire",
+      "Documents comptables à tout moment : État, Balance, Grand Livre, Balance auxiliaire",
       "Historique conservé d'une année sur l'autre",
     ],
-    cta: "Choisir Croissance",
+    cta: "Choisir Pro",
     highlighted: true,
   },
   {
-    name: "Sur mesure",
-    price: "Sur devis",
-    period: "",
-    description: "Pour plusieurs sites, une équipe dédiée, ou des besoins spécifiques.",
+    name: "Business",
+    price: "À partir de 30.99",
+    period: "/ mois",
+    description: "Pour les structures multi-sites qui veulent un accompagnement sur-mesure.",
     features: [
-      "Tout ce qui est inclus dans Croissance",
-      "Accompagnement dédié",
-      "Intégration à vos outils existants",
+      "Tout ce qui est inclus dans Pro",
+      "Accompagnement dédié par un conseiller",
+      "Intégration avec vos outils existants",
+      "Déclaration de TVA et dépôt de vos documents comptables",
       "Rendez-vous de suivi réguliers",
     ],
     cta: "En discuter",
@@ -47,7 +49,7 @@ const PLANS = [
 export default function TarifSection() {
   return (
     <section id="tarifs" className="bg-[#0D021A] py-16 text-white md:py-24">
-      <div className="mx-auto max-w-wrap px-8">
+      <div className="mx-auto max-w-[1200px] px-6 md:px-8">
         <div className="mb-3 max-w-[600px]">
           <span className="mb-3 block font-mono text-[13px] text-[#E3127D]">
             TARIFS
