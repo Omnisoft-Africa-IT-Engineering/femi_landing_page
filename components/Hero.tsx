@@ -71,7 +71,7 @@ export default function Hero() {
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-2 backdrop-blur-sm shadow-2xl">
               <Image
                 src="/Image collée.png" // 👈 Remplacez par le nom de votre fichier dans public/
-                alt="Aperçu de la plateforme ComptaPME"
+                alt="Aperçu de la plateforme Femi by Omnisoft Africa"
                 fill
                 priority
                 className="rounded-xl object-cover object-top"
