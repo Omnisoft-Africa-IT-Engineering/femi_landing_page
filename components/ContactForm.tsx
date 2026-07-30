@@ -272,7 +272,7 @@ export default function ContactForm() {
         </div>
         <h3 className="mb-2 text-[19px] text-white">Demande envoyée</h3>
         <p className="text-sm text-gray-400">
-          Merci — un consultant Méridien vous recontacte sous 24h ouvrées.
+          Merci — un consultant Femi by Omnisoft Africa  vous recontacte sous 24h ouvrées.
         </p>
       </div>
     );

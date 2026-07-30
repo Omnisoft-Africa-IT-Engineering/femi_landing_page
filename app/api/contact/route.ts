@@ -14,11 +14,33 @@ export async function POST(request: Request) {
       );
     }
 
-    // Authentification auprès de Google avec le compte de service
+    // 1. Nettoyage robuste de la clé privée
+    let privateKey = process.env.GOOGLE_PRIVATE_KEY || '';
+    
+    // Supprime les éventuels guillemets en début/fin de chaîne ajoutés sur Vercel
+    if (privateKey.startsWith('"') && privateKey.endsWith('"')) {
+      privateKey = privateKey.slice(1, -1);
+    }
+    
+    // Remplace les "\n" littéraux par de vrais sauts de ligne PEM
+    privateKey = privateKey.replace(/\\n/g, '\n');
+
+    // 2. Vérification de la présence du mail du compte de service
+    const clientEmail = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || process.env.GOOGLE_CLIENT_EMAIL;
+
+    if (!privateKey || !clientEmail) {
+      console.error('Variables d\'environnement Google manquantes.');
+      return NextResponse.json(
+        { error: 'Erreur de configuration serveur.' },
+        { status: 500 }
+      );
+    }
+
+    // Authentification auprès de Google
     const auth = new google.auth.GoogleAuth({
       credentials: {
-        client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-        private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+        client_email: clientEmail,
+        private_key: privateKey,
       },
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
@@ -26,12 +48,12 @@ export async function POST(request: Request) {
     const sheets = google.sheets({ version: 'v4', auth });
 
     const spreadsheetId = process.env.GOOGLE_SHEET_ID;
-    const dateDuJour = new Date().toISOString(); // Date et heure actuelles
+    const dateDuJour = new Date().toLocaleString('fr-FR', { timeZone: 'UTC' });
 
-    // Ajout de la ligne dans la feuille Google Sheets
+    // Ajout de la ligne dans Google Sheets
     await sheets.spreadsheets.values.append({
       spreadsheetId,
-      range: 'Sheet1!A:F', // Assure-toi que ta feuille s'appelle bien Sheet1 (ou renomme-la selon ton onglet)
+      range: 'Sheet1!A:F', // Vérifiez bien que votre onglet s'appelle 'Sheet1' (ou 'Feuille 1')
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [[dateDuJour, nom, email, telephone || '', entreprise || '', message]],
@@ -39,7 +61,7 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json({ success: true, message: 'Message envoyé avec succès !' });
-  } catch (error) {
+  } catch (error: unknown) {
     console.error("Erreur lors de l'écriture dans Google Sheets :", error);
     return NextResponse.json(
       { error: "Une erreur est survenue lors de l'envoi du message." },
