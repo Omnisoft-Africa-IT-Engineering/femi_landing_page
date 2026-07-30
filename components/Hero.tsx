@@ -9,7 +9,7 @@ const STATS = [
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#0D021A] pb-16 pt-10 text-white md:py-20">
-      {/* Halos lumineux d'arrière-plan */}
+      { /* Halos lumineux d'arrière-plan */}
       <div className="pointer-events-none absolute left-1/4 top-0 h-80 w-80 rounded-full bg-[#9013FE] opacity-25 blur-[140px]" />
       <div className="pointer-events-none absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-[#E3127D] opacity-20 blur-[160px]" />
 
@@ -55,7 +55,7 @@ export default function Hero() {
 
             {/* Statistiques clés */}
             <div className="mt-10 flex flex-wrap gap-8 border-t border-white/10 pt-4">
-              {STATS.map((stat) => (
+              {STATS.map((stat) =>(
                 <div key={stat.label} className="min-w-[120px]">
                   <span className="block font-mono text-[22px] font-bold text-white">
                     {stat.num}
